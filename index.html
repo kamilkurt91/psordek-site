@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSÖ Yayınları — Portakal Sulu Ördek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Source Serif 4',serif;color:#1a1a1a;background:#fff;}
+a{text-decoration:none;color:inherit;}
+html{scroll-behavior:smooth;}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;border-bottom:1px solid #e5e5e5;position:sticky;top:0;background:#fff;z-index:100;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo img{height:44px;width:44px;object-fit:contain;border-radius:50%;}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;line-height:1.2;}
+.nav-logo-sub{font-size:10px;color:#666;font-style:italic;letter-spacing:.08em;text-transform:uppercase;}
+nav ul{list-style:none;display:flex;gap:1.4rem;flex-wrap:wrap;}
+nav ul li a{font-size:13px;color:#555;letter-spacing:.03em;transition:color .2s;}
+nav ul li a:hover{color:#F5A623;}
+
+/* HERO */
+.hero{padding:5rem 2.5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1100px;margin:0 auto;}
+.hero-tag{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#F5A623;margin-bottom:1.2rem;}
+.hero-title{font-family:'Playfair Display',serif;font-size:44px;font-weight:600;line-height:1.15;margin-bottom:1.5rem;}
+.hero-title em{font-style:italic;color:#F5A623;}
+.hero-desc{font-size:16px;line-height:1.8;color:#555;font-weight:300;}
+.hero-btns{display:flex;gap:12px;margin-top:2rem;}
+.btn-primary{padding:10px 22px;background:#F5A623;color:#fff;border:none;border-radius:2px;font-size:13px;font-family:'Source Serif 4',serif;cursor:pointer;letter-spacing:.04em;}
+.btn-primary:hover{background:#d4891a;}
+.btn-secondary{padding:10px 22px;background:transparent;border:1px solid #ccc;color:#1a1a1a;border-radius:2px;font-size:13px;font-family:'Source Serif 4',serif;cursor:pointer;}
+.hero-books{display:flex;gap:14px;justify-content:flex-end;align-items:flex-end;}
+.hero-book{box-shadow:4px 6px 20px rgba(0,0,0,.18);border-radius:3px;overflow:hidden;transition:transform .3s;}
+.hero-book:hover{transform:translateY(-6px);}
+.hero-book:nth-child(2){margin-bottom:20px;}
+.hero-book img{width:110px;height:160px;object-fit:cover;display:block;}
+
+/* SECTIONS */
+section{max-width:1100px;margin:0 auto;padding:4rem 2.5rem;}
+.section-tag{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#F5A623;margin-bottom:.6rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:600;line-height:1.2;}
+.section-divider{width:40px;height:2px;background:#F5A623;margin-top:12px;margin-bottom:2.5rem;}
+.sep{border:none;border-top:1px solid #e5e5e5;margin:0 2.5rem;}
+
+/* KİTAPLAR */
+.books-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+.book-item{border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;transition:border-color .2s;}
+.book-item:hover{border-color:#F5A623;}
+.book-cover-wrap{display:flex;align-items:center;justify-content:center;padding:1.5rem;background:#f8f7f4;}
+.book-cover-wrap img{width:120px;height:175px;object-fit:cover;border-radius:2px;box-shadow:3px 4px 14px rgba(0,0,0,.15);}
+.book-info{padding:1rem 1.2rem 1.2rem;}
+.book-genre{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#F5A623;margin-bottom:4px;}
+.book-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;margin-bottom:4px;color:#1a1a1a;line-height:1.3;}
+.book-author{font-size:13px;color:#666;font-style:italic;margin-bottom:12px;}
+.book-buy-btn{display:inline-block;padding:7px 16px;background:#F5A623;color:#fff;border:none;border-radius:2px;font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;}
+.book-buy-btn:hover{background:#d4891a;}
+
+/* SATIN AL */
+.satinal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+.satinal-card{border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;}
+.satinal-cover{display:flex;align-items:center;justify-content:center;padding:1.5rem;background:#f8f7f4;}
+.satinal-cover img{width:100px;height:148px;object-fit:cover;border-radius:2px;box-shadow:3px 4px 14px rgba(0,0,0,.15);}
+.satinal-info{padding:1rem 1.2rem 1.2rem;}
+.satinal-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:600;margin-bottom:3px;line-height:1.3;}
+.satinal-author{font-size:12px;color:#666;font-style:italic;margin-bottom:12px;}
+.satinal-links{display:flex;flex-direction:column;gap:8px;}
+.satinal-link{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #e5e5e5;border-radius:6px;font-size:12px;color:#1a1a1a;transition:border-color .2s,color .2s;}
+.satinal-link:hover{border-color:#F5A623;color:#F5A623;}
+.satinal-link i{font-size:15px;color:#F5A623;}
+.satinal-note{margin-top:2rem;padding:1rem 1.5rem;background:#fffbf3;border:1px solid #F5A623;border-radius:8px;font-size:13px;color:#555;line-height:1.7;}
+.satinal-note strong{color:#1a1a1a;}
+.satinal-note a{color:#F5A623;}
+
+/* YAZARLAR */
+.writers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.writer-card{padding:1.5rem;border:1px solid #e5e5e5;border-radius:12px;text-align:center;}
+.writer-avatar{width:64px;height:64px;border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:22px;font-weight:600;}
+.writer-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;margin-bottom:4px;}
+.writer-book{font-size:12px;color:#F5A623;margin-bottom:6px;font-style:italic;}
+.writer-bio{font-size:12px;line-height:1.7;color:#666;font-weight:300;}
+
+/* SERİLER */
+.series-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.series-card{padding:2rem;border:1px solid #e5e5e5;border-radius:12px;position:relative;}
+.series-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px;}
+.series-card.s1::before{background:#F5A623;}
+.series-card.s2::before{background:#6B4226;}
+.series-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;margin-bottom:.5rem;}
+.series-desc{font-size:13px;line-height:1.7;color:#666;font-weight:300;}
+.series-count{font-size:11px;color:#F5A623;margin-top:1rem;letter-spacing:.08em;text-transform:uppercase;}
+
+/* HAKKIMIZDA */
+.about-block{background:#f8f7f4;border-radius:12px;padding:3rem;display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:center;}
+.about-logo-wrap{text-align:center;}
+.about-logo-wrap img{width:100px;height:100px;object-fit:contain;margin:0 auto;display:block;}
+.about-slogan{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#666;line-height:1.6;margin-top:12px;}
+.about-text{font-size:15px;line-height:1.9;color:#555;font-weight:300;}
+.about-text p+p{margin-top:1rem;}
+
+/* HABERLER */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
+.news-item{padding:1.5rem;border:1px solid #e5e5e5;border-radius:12px;}
+.news-date{font-size:11px;color:#888;letter-spacing:.06em;margin-bottom:.5rem;}
+.news-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;line-height:1.4;margin-bottom:.5rem;}
+.news-body{font-size:13px;line-height:1.7;color:#666;font-weight:300;}
+
+/* İLETİŞİM */
+.contact-block{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+.contact-info p{font-size:14px;line-height:1.8;color:#555;font-weight:300;margin-bottom:1.5rem;}
+.contact-detail{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.contact-detail i{font-size:16px;color:#F5A623;}
+.contact-detail span{font-size:14px;color:#555;font-weight:300;}
+.contact-form{display:flex;flex-direction:column;gap:12px;}
+.contact-form input,.contact-form textarea{padding:10px 14px;border:1px solid #ccc;border-radius:8px;font-size:14px;font-family:'Source Serif 4',serif;background:#fff;color:#1a1a1a;outline:none;}
+.contact-form input:focus,.contact-form textarea:focus{border-color:#F5A623;}
+.contact-form textarea{min-height:120px;resize:vertical;}
+
+/* AFİYETLE & FOOTER */
+.afiyetle{text-align:center;padding:3rem 2.5rem;border-top:1px solid #e5e5e5;max-width:1100px;margin:0 auto;}
+.afiyetle img{max-width:260px;}
+.site-footer{border-top:1px solid #e5e5e5;padding:1.5rem 2.5rem;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.footer-brand{display:flex;align-items:center;gap:8px;font-family:'Playfair Display',serif;font-size:14px;color:#666;}
+.footer-brand img{height:28px;width:28px;object-fit:contain;border-radius:50%;}
+.footer-copy{font-size:12px;color:#888;font-weight:300;}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav>
+  <div class="nav-logo">
+    <!-- LOGO: logo.jpg -->
+    <img src="logo.jpg" alt="PSÖ Yayınları logo">
+    <div>
+      <div class="nav-logo-text">PSÖ Yayınları</div>
+      <div class="nav-logo-sub">Portakal Sulu Ördek</div>
+    </div>
+  </div>
+  <ul>
+    <li><a href="#kitaplar">Kitaplarımız</a></li>
+    <li><a href="#yazarlar">Yazarlarımız</a></li>
+    <li><a href="#seriler">Seriler</a></li>
+    <li><a href="#yayindunya">Yayın Dünyasında Biz</a></li>
+    <li><a href="#haberler">Haberler</a></li>
+    <li><a href="#satinal">Satın Al</a></li>
+    <li><a href="#iletisim">Bize Ulaşın</a></li>
+  </ul>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<div style="max-width:1100px;margin:0 auto;">
+  <div class="hero">
+    <div>
+      <div class="hero-tag">Portakal Sulu Ördek Yayınları</div>
+      <!-- SLOGAN: aşağıdaki metni değiştirebilirsiniz -->
+      <h1 class="hero-title">Sözcükler<br>kanatlansa <em>diye</em><br>yayınlıyoruz.</h1>
+      <p class="hero-desc">Edebiyatın dönüştürücü gücüne inanan bir yayınevi olarak, her kitapta yeni bir ses, yeni bir dünya arıyoruz.</p>
+      <div class="hero-btns">
+        <a href="#kitaplar"><button class="btn-primary">Kitaplarımızı Keşfedin</button></a>
+        <a href="#yayindunya"><button class="btn-secondary">Hakkımızda</button></a>
+      </div>
+    </div>
+    <div class="hero-books">
+      <!-- HERO GÖRSELLERİ:  klasöründeki dosya adlarını değiştirin -->
+      <div class="hero-book"><img src="kirlangiclar.jpg" alt="Kırlangıçlar Yuvaya Dönmedi"></div>
+      <div class="hero-book"><img src="nicin-dag.jpg" alt="Niçin Dağ?"></div>
+      <div class="hero-book"><img src="romeo-juliet.jpg" alt="Bu Bir Romeo ve Juliet Hikayesi Değildir"></div>
+    </div>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- ===================== KİTAPLARIMIZ ===================== -->
+<!-- YENİ KİTAP EKLEMEK: aşağıdaki book-item bloklarından birini kopyalayıp yapıştırın -->
+<section id="kitaplar">
+  <div class="section-tag">Kitaplarımız</div>
+  <h2 class="section-title">Rafımızdaki dünyalar</h2>
+  <div class="section-divider"></div>
+  <div class="books-grid">
+
+    <!-- KİTAP 1 -->
+    <div class="book-item">
+      <div class="book-cover-wrap">
+        <!-- KAPAK GÖRSELİ: kirlangiclar.jpg -->
+        <img src="kirlangiclar.jpg" alt="Kırlangıçlar Yuvaya Dönmedi">
+      </div>
+      <div class="book-info">
+        <div class="book-genre">Öykü</div> <!-- TÜR: Öykü / Şiir / Roman / vb. -->
+        <div class="book-title">Kırlangıçlar Yuvaya Dönmedi</div> <!-- KİTAP ADI -->
+        <div class="book-author">Ahmet Yetik</div> <!-- YAZAR ADI -->
+        <a href="#satinal"><button class="book-buy-btn">Satın Al</button></a>
+      </div>
+    </div>
+
+    <!-- KİTAP 2 -->
+    <div class="book-item">
+      <div class="book-cover-wrap">
+        <!-- KAPAK GÖRSELİ: nicin-dag.jpg -->
+        <img src="nicin-dag.jpg" alt="Niçin Dağ?">
+      </div>
+      <div class="book-info">
+        <div class="book-genre">Şiir</div>
+        <div class="book-title">Niçin Dağ?</div>
+        <div class="book-author">Burak Yasin Taş</div>
+        <a href="#satinal"><button class="book-buy-btn">Satın Al</button></a>
+      </div>
+    </div>
+
+    <!-- KİTAP 3 -->
+    <div class="book-item">
+      <div class="book-cover-wrap">
+        <!-- KAPAK GÖRSELİ: romeo-juliet.jpg -->
+        <img src="romeo-juliet.jpg" alt="Bu Bir Romeo ve Juliet Hikayesi Değildir">
+      </div>
+      <div class="book-info">
+        <div class="book-genre">Roman</div>
+        <div class="book-title">Bu Bir Romeo ve Juliet Hikayesi Değildir</div>
+        <div class="book-author">Yakuphan Güleç</div>
+        <a href="#satinal"><button class="book-buy-btn">Satın Al</button></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ===================== YAZARLARIMIZ ===================== -->
+<!-- YENİ YAZAR EKLEMEK: writer-card bloklarından birini kopyalayıp yapıştırın -->
+<section id="yazarlar">
+  <div class="section-tag">Yazarlarımız</div>
+  <h2 class="section-title">Sesler ve kalemler</h2>
+  <div class="section-divider"></div>
+  <div class="writers-grid">
+
+    <!-- YAZAR 1 -->
+    <div class="writer-card">
+      <!-- İNİSYAL ve RENK: style içindeki background ve color değerlerini değiştirin -->
+      <div class="writer-avatar" style="background:#FAECE7;color:#993C1D;">AY</div>
+      <div class="writer-name">Ahmet Yetik</div> <!-- YAZAR ADI -->
+      <div class="writer-book">Kırlangıçlar Yuvaya Dönmedi</div> <!-- KİTAP ADI -->
+      <div class="writer-bio">Öykü yazarı. Anadolu'nun sesini ve insanını ustalıkla kaleme alır. İlk kitabıyla PSÖ Yayınları bünyesinde.</div> <!-- BİYOGRAFİ -->
+    </div>
+
+    <!-- YAZAR 2 -->
+    <div class="writer-card">
+      <div class="writer-avatar" style="background:#F1EFE8;color:#444441;">BT</div>
+      <div class="writer-name">Burak Yasin Taş</div>
+      <div class="writer-book">Niçin Dağ?</div>
+      <div class="writer-bio">Şair. Doğa ve varoluş arasındaki gerilimi şiirin diliyle araştırır. Niçin Dağ? onun ilk şiir kitabı.</div>
+    </div>
+
+    <!-- YAZAR 3 -->
+    <div class="writer-card">
+      <div class="writer-avatar" style="background:#FCEBEB;color:#A32D2D;">YG</div>
+      <div class="writer-name">Yakuphan Güleç</div>
+      <div class="writer-book">Bu Bir Romeo ve Juliet Hikayesi Değildir</div>
+      <div class="writer-bio">Roman yazarı. Dijital çağda aşkı ve ilişkileri çağdaş bir dille ele alır.</div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ===================== SERİLER ===================== -->
+<section id="seriler">
+  <div class="section-tag">Seriler</div>
+  <h2 class="section-title">Kitaplıklarımız</h2>
+  <div class="section-divider"></div>
+  <div class="series-grid">
+
+    <!-- SERİ 1 -->
+    <div class="series-card s1">
+      <div class="series-name">Deruhte Kitaplığı</div> <!-- SERİ ADI -->
+      <div class="series-desc">Sorumluluk almak, yüklenmek ve taşımak üzerine kurulu bir kitaplık. Deruhte; hem bir söz, hem bir yük, hem de bir sevda. Bu serideki kitaplar okuyucuya ağır ama güzel bir yük bırakır.</div> <!-- AÇIKLAMA -->
+      <div class="series-count">Kitaplar yakında</div> <!-- KİTAP SAYISI veya durum -->
+    </div>
+
+    <!-- SERİ 2 -->
+    <div class="series-card s2">
+      <div class="series-name">Öykümen Kitaplığı</div>
+      <div class="series-desc">Öykünün sonsuz evreni için bir kapı. Öykümen; öykü seven, öykü yaşayan, öykünün içinde var olan. Bu seride kısa formun ustalıklarını bir araya getiriyoruz.</div>
+      <div class="series-count">Kitaplar yakında</div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ===================== YAYIN DÜNYASINDA BİZ ===================== -->
+<section id="yayindunya">
+  <div class="section-tag">Yayın Dünyasında Biz</div>
+  <h2 class="section-title">Kimiz, neredeyiz?</h2>
+  <div class="section-divider"></div>
+  <div class="about-block">
+    <div class="about-logo-wrap">
+      <img src="logo.jpg" alt="PSÖ Yayınları">
+      <div class="about-slogan">"Afiyetle okuyunuz..."</div>
+    </div>
+    <div class="about-text">
+      <!-- HAKKIMIZDA METİNLERİ: aşağıdaki paragrafları düzenleyin -->
+      <p>Portakal Sulu Ördek Yayınları — PSÖ — edebiyatın dönüştürücü gücüne inanan, küçük ama özgün bir yayınevidir. Yayın hayatımıza inanç, özen ve merakla başladık; her kitabı hem bir söz, hem bir sorumluluk olarak görüyoruz.</p>
+      <p>Yazarlarımıza eşlik ederken onların sesinin özgünlüğünü korumayı en temel ilkemiz sayıyoruz. Kitap tasarımından dağıtımına, her aşamada kaliteyi ve anlamlılığı önceliyoruz.</p>
+      <p>Deruhte ve Öykümen kitaplıklarımızla farklı türlerde okuyucularla buluşmayı, Türk edebiyatının büyümesine küçük ama kararlı bir katkı sunmayı hedefliyoruz.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ===================== HABERLER ===================== -->
+<!-- YENİ HABER EKLEMEK: news-item bloklarından birini kopyalayıp yapıştırın -->
+<section id="haberler">
+  <div class="section-tag">Haberler</div>
+  <h2 class="section-title">Son gelişmeler</h2>
+  <div class="section-divider"></div>
+  <div class="news-grid">
+
+    <!-- HABER 1 -->
+    <div class="news-item">
+      <div class="news-date">2025</div> <!-- TARİH -->
+      <div class="news-title">Üç kitabımız okuyucuyla buluştu</div> <!-- BAŞLIK -->
+      <div class="news-body">Kırlangıçlar Yuvaya Dönmedi, Niçin Dağ? ve Bu Bir Romeo ve Juliet Hikayesi Değildir — üç farklı ses, üç farklı tür. PSÖ Yayınları'nın ilk üç kitabı raflardaki yerini aldı.</div> <!-- İÇERİK -->
+    </div>
+
+    <!-- HABER 2 -->
+    <div class="news-item">
+      <div class="news-date">2025</div>
+      <div class="news-title">PSÖ Yayınları yayın hayatına başladı</div>
+      <div class="news-body">Portakal Sulu Ördek Yayınları olarak yayın dünyasına merhaba dedik. Afiyetle okuyunuz!</div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ===================== SATIN AL ===================== -->
+<!-- YENİ KİTAP EKLEMEK: satinal-card bloklarından birini kopyalayıp yapıştırın -->
+<section id="satinal">
+  <div class="section-tag">Satın Al</div>
+  <h2 class="section-title">Kitaplarımıza ulaşın</h2>
+  <div class="section-divider"></div>
+  <div class="satinal-grid">
+
+    <!-- SATIN AL - KİTAP 1 -->
+    <div class="satinal-card">
+      <div class="satinal-cover">
+        <img src="kirlangiclar.jpg" alt="Kırlangıçlar Yuvaya Dönmedi">
+      </div>
+      <div class="satinal-info">
+        <div class="satinal-title">Kırlangıçlar Yuvaya Dönmedi</div>
+        <div class="satinal-author">Ahmet Yetik</div>
+        <div class="satinal-links">
+          <!-- LİNKLER: href="..." içine satış sitesi linkini yapıştırın -->
+          <a class="satinal-link" href="https://www.dr.com.tr" target="_blank"><i class="ti ti-book"></i> D&R</a>
+          <a class="satinal-link" href="https://www.kitapyurdu.com" target="_blank"><i class="ti ti-book"></i> Kitap Yurdu</a>
+          <a class="satinal-link" href="https://www.amazon.com.tr" target="_blank"><i class="ti ti-brand-amazon"></i> Amazon</a>
+          <a class="satinal-link" href="mailto:psoyayinlari@gmail.com"><i class="ti ti-mail"></i> Doğrudan Sipariş</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SATIN AL - KİTAP 2 -->
+    <div class="satinal-card">
+      <div class="satinal-cover">
+        <img src="nicin-dag.jpg" alt="Niçin Dağ?">
+      </div>
+      <div class="satinal-info">
+        <div class="satinal-title">Niçin Dağ?</div>
+        <div class="satinal-author">Burak Yasin Taş</div>
+        <div class="satinal-links">
+          <a class="satinal-link" href="https://www.dr.com.tr" target="_blank"><i class="ti ti-book"></i> D&R</a>
+          <a class="satinal-link" href="https://www.kitapyurdu.com" target="_blank"><i class="ti ti-book"></i> Kitap Yurdu</a>
+          <a class="satinal-link" href="https://www.amazon.com.tr" target="_blank"><i class="ti ti-brand-amazon"></i> Amazon</a>
+          <a class="satinal-link" href="mailto:psoyayinlari@gmail.com"><i class="ti ti-mail"></i> Doğrudan Sipariş</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SATIN AL - KİTAP 3 -->
+    <div class="satinal-card">
+      <div class="satinal-cover">
+        <img src="romeo-juliet.jpg" alt="Bu Bir Romeo ve Juliet Hikayesi Değildir">
+      </div>
+      <div class="satinal-info">
+        <div class="satinal-title">Bu Bir Romeo ve Juliet Hikayesi Değildir</div>
+        <div class="satinal-author">Yakuphan Güleç</div>
+        <div class="satinal-links">
+          <a class="satinal-link" href="https://www.dr.com.tr" target="_blank"><i class="ti ti-book"></i> D&R</a>
+          <a class="satinal-link" href="https://www.kitapyurdu.com" target="_blank"><i class="ti ti-book"></i> Kitap Yurdu</a>
+          <a class="satinal-link" href="https://www.amazon.com.tr" target="_blank"><i class="ti ti-brand-amazon"></i> Amazon</a>
+          <a class="satinal-link" href="mailto:psoyayinlari@gmail.com"><i class="ti ti-mail"></i> Doğrudan Sipariş</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NOT KUTUSU: satış platformlarına henüz eklenmemişse bu notu güncelleyin -->
+  <div class="satinal-note">
+    <strong>Not:</strong> Kitaplarımız D&R, Kitap Yurdu ve Amazon gibi platformlarda satışa sunulacaktır. Şu an için doğrudan sipariş almaktayız — <a href="mailto:psoyayinlari@gmail.com">psoyayinlari@gmail.com</a> adresine yazabilirsiniz.
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ===================== BİZE ULAŞIN ===================== -->
+<section id="iletisim">
+  <div class="section-tag">Bize Ulaşın</div>
+  <h2 class="section-title">Birlikte konuşalım</h2>
+  <div class="section-divider"></div>
+  <div class="contact-block">
+    <div class="contact-info">
+      <p>Yazarlarımız, okuyucularımız ve yayın dünyasından herkese kapımız açık. Öneri, soru ya da iş birliği için bize yazabilirsiniz.</p>
+      <!-- İLETİŞİM BİLGİLERİ: aşağıdaki bilgileri güncelleyin -->
+      <div class="contact-detail"><i class="ti ti-mail"></i><span>psoyayinlari@gmail.com</span></div>
+      <div class="contact-detail"><i class="ti ti-brand-instagram"></i><span>@psoyayinlari</span></div>
+    </div>
+    <div class="contact-form">
+      <input type="text" placeholder="Adınız Soyadınız">
+      <input type="email" placeholder="E-posta adresiniz">
+      <input type="text" placeholder="Konu">
+      <textarea placeholder="Mesajınız..."></textarea>
+      <!-- FORM GÖNDER: href içindeki mail adresini güncelleyin -->
+      <button class="btn-primary" style="align-self:flex-start;" onclick="window.location.href='mailto:psoyayinlari@gmail.com'">Gönder</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AFİYETLE ===================== -->
+<div class="afiyetle">
+  <!-- AFİYETLE GÖRSELİ: afiyetle.jpg -->
+  <img src="afiyetle.jpg" alt="Afiyetle okuyunuz — PSÖ Yayınları">
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<div class="site-footer">
+  <div class="footer-brand">
+    <img src="logo.jpg" alt="PSÖ">
+    PSÖ Yayınları
+  </div>
+  <div class="footer-copy">© 2025 Portakal Sulu Ördek Yayınları — Tüm hakları saklıdır.</div>
+</div>
+
+</body>
+</html>
